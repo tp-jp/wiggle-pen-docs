@@ -11,7 +11,7 @@ QvPen拡張版のWigglePenは、Prefabをワールドに配置して使います
 Projectウィンドウで次のPrefabを探し、ワールドのHierarchyへドラッグします。
 
 ```text
-Assets/TpLab/WigglePen/Prefabs/WigglePen Variant.prefab
+Assets/TpLab/WigglePen/Prefabs/WigglePen.prefab
 ```
 
 シーン内で、プレイヤーが手を伸ばせる位置に置きます。最初は配置位置だけを調整し、Prefab内部の参照やマテリアル設定はそのまま使ってください。
