@@ -13,9 +13,65 @@ export default defineConfig({
     ['meta', { name: 'theme-color', content: '#397864' }]
   ],
   sitemap: { hostname: 'https://tp-jp.github.io/wiggle-pen-docs/' },
+  locales: {
+    root: { label: '日本語', lang: 'ja-JP' },
+    en: {
+      label: 'English',
+      lang: 'en',
+      title: 'WigglePen',
+      description: 'Setup, controls, and settings for WigglePen, the QvPen extension, and WigglePenAvatar.',
+      themeConfig: {
+        siteTitle: 'WigglePen',
+        nav: [
+          { text: 'Getting started', link: '/en/guide/' },
+          { text: 'For worlds', link: '/en/world/' },
+          { text: 'For avatars', link: '/en/avatar/' },
+          { text: 'Troubleshooting', link: '/en/troubleshooting' }
+        ],
+        sidebar: [
+          { text: 'Getting started', items: [
+            { text: 'Choose a guide', link: '/en/guide/' },
+            { text: 'Requirements', link: '/en/guide/requirements' }
+          ] },
+          { text: 'QvPen extension', items: [
+            { text: 'World setup', link: '/en/world/' },
+            { text: 'Drawing and erasing', link: '/en/world/usage' },
+            { text: 'Wiggle settings', link: '/en/world/settings' }
+          ] },
+          { text: 'Avatar version', items: [
+            { text: 'Avatar setup', link: '/en/avatar/' },
+            { text: 'Drawing, erasing, and colors', link: '/en/avatar/usage' },
+            { text: 'Fingertip placement', link: '/en/avatar/placement' },
+            { text: 'Drawing settings', link: '/en/avatar/settings' }
+          ] },
+          { text: 'Support', items: [
+            { text: 'Troubleshooting', link: '/en/troubleshooting' },
+            { text: 'Terms of use', link: '/en/terms' },
+            { text: 'Changelog', link: '/en/changelog' }
+          ] }
+        ],
+        outline: { label: 'On this page', level: [2, 3] },
+        docFooter: { prev: 'Previous page', next: 'Next page' },
+        langMenuLabel: 'Change language',
+        darkModeSwitchLabel: 'Appearance',
+        lightModeSwitchTitle: 'Switch to light theme',
+        darkModeSwitchTitle: 'Switch to dark theme',
+        sidebarMenuLabel: 'Menu',
+        returnToTopLabel: 'Return to top',
+        skipToContentLabel: 'Skip to content',
+        notFound: {
+          title: 'Page not found',
+          quote: 'Use the menu or search to find a page.',
+          linkLabel: 'Go to home', linkText: 'Go to home'
+        },
+        footer: { message: 'WigglePen / WigglePenAvatar Documentation' }
+      }
+    }
+  },
   themeConfig: {
     logo: '/favicon.svg',
     siteTitle: 'ぶるぶるペン',
+    langMenuLabel: '言語を切り替え',
     nav: [
       { text: 'はじめに', link: '/guide/' },
       { text: 'QvPen拡張版', link: '/world/' },
@@ -77,6 +133,6 @@ export default defineConfig({
       quote: '目次または検索からページを探してください。',
       linkLabel: 'トップページへ', linkText: 'トップページへ戻る'
     },
-    footer: { message: 'ぶるぶるペン ドキュメント · WigglePen / WigglePenAvatar' }
+    footer: { message: 'ぶるぶるペン ドキュメント' }
   }
 })

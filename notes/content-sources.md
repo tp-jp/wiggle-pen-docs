@@ -8,7 +8,7 @@
 
 | 記載内容 | 根拠となるファイル（各Unityプロジェクト相対） |
 | --- | --- |
-| QvPen依存、PC/Quest参照 | `Assets/TpLab/WigglePen/Prefabs/WigglePen Variant.prefab`、`Packages/net.ureishi.qvpen/QvPen.prefab.meta` |
+| QvPen依存、PC/Quest参照 | `Assets/TpLab/WigglePen/Prefabs/WigglePen.prefab`（旧名：`WigglePen Variant.prefab`）、`Packages/net.ureishi.qvpen/QvPen.prefab.meta` |
 | ワールドの揺れの項目・保存値 | `Assets/TpLab/WigglePen/Materials/WiggleInk_PC.mat`、`WiggleInk_Quest.mat`、`Shaders/WiggleInk.shader`、`WiggleInkQuest.shader`、`WiggleInkNoise.cginc` |
 | QvPenの描画・消去・線幅上書き | `Packages/net.ureishi.qvpen/Runtime/UdonScript/QvPen_Pen.cs`、`QvPen_PenManager.cs`、`QvPen_Eraser.cs` |
 | アバターのメニュー名・初期値・左右 | `Assets/TpLab/WigglePenAvatar/Prefabs/WigglePen_Right.prefab`、`WigglePen_Left.prefab` |
@@ -55,10 +55,19 @@ Drawing Settingsに「ペン先の発光強度」を追加。初期値0.5、範�
 ## サイトの検証
 
 - Node.js 24.22.1 / npm 12.0.1で、lockfileからの `npm ci` とVitePressビルドに成功。
-- 404ページを含む14 HTML、462件の内部リンク・アセット・アンカーを検査（2026-11-20更新）。
+- 404ページを含む27 HTML、971件の内部リンク・アセット・アンカーを検査（2026-11-20更新）。
 - ローカルのChromeで、1440 px幅・390 px幅を確認。日本語検索、ページ遷移、直接アクセス・再読み込み、ダークモード、モバイルの目次操作を確認。
 - モバイル幅ですべての本文ページにページ全体の横はみ出しなし。長い表やファイルパスは各領域内で横スクロールする。
 - Viteを6.4.6へoverride後、依存監査の指摘は0件。
 - GitHub Actionsの実行・Pagesでの実公開は未実施。
 
 プレビューサーバー起動後に再ビルドした場合は、サーバーも起動し直す。VitePressのプレビューが古いアセット一覧を保持した状態では、新しいハッシュ付きファイルが404になることを確認した。
+
+## 日本語・英語の管理
+
+- 日本語は従来のURL、英語は `/en/` 配下に置く。全13ページを同じ相対パスで対応させ、VitePressの言語メニューで切り替える。
+- 英語版では説明・メニュー・検索表示・図を翻訳する。アセットの日本語UIラベルは英訳を併記し、実際の項目名を残す。アセット本体のUIは変更しない。
+- 本文や利用規約を変更するときは、日本語・英語の対応ページを同時に更新する。利用規約は同じ許可・禁止事項を記載する。
+- 翻訳時に、ワールド版Prefabが `WigglePen.prefab` に改名されていることを実ファイルと日本語の導入手順で確認した。日本語の補足とトラブル対処に残っていた旧名も修正した。
+- Chromeで全13組のページと言語リンク、PC・スマートフォンでの同じページへの言語切り替え、共通アンカー `tip-emission` の維持、各言語の検索と結果ページへの遷移、直接再読み込み、ダークモード、英語の目次操作を確認した。
+- 英語全13ページで390 px幅の横はみ出しがなく、ページ・コンソール・HTTPエラーがないことを確認した。英語ホームとアバター導入ページのスクリーンショットも確認した。

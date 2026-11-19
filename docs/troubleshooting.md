@@ -49,7 +49,7 @@ Drawing Settingsの **ペン先の発光強度** を調整します。ペン先�
 
 ## QvPen拡張版：線が揺れない
 
-**WigglePen Variant** を配置しているか確認します。インクマテリアルの **Wiggle Amplitude (m)** と **Wiggle Frame Rate (fps)** のどちらかが0になっている場合は、値を大きくしてください。
+**WigglePen** を配置しているか確認します。インクマテリアルの **Wiggle Amplitude (m)** と **Wiggle Frame Rate (fps)** のどちらかが0になっている場合は、値を大きくしてください。
 
 ## QvPen拡張版：マテリアルのWidthを変えても太さが変わらない
 

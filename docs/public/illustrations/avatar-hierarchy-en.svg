@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="260" viewBox="0 0 800 260" role="img" aria-labelledby="title">
+  <title id="title">WigglePen_Right and WigglePen_Left directly under the avatar root</title>
+  <rect width="800" height="260" rx="16" fill="#eef6f1"/>
+  <g font-family="sans-serif" font-size="22" fill="#244b3e">
+    <text x="40" y="52">Avatar</text><text x="105" y="108">Armature</text>
+    <text x="105" y="166" font-weight="700">WigglePen_Right</text>
+    <text x="105" y="224" font-weight="700">WigglePen_Left</text>
+    <text x="410" y="166" font-size="18">Draw with the right hand</text>
+    <text x="410" y="224" font-size="18">Draw with the left hand (optional)</text>
+  </g>
+  <path d="M58 68v149h30M58 101h30M58 159h30" fill="none" stroke="#86b49f" stroke-width="3"/>
+</svg>

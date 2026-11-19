@@ -17,7 +17,7 @@ Assets/TpLab/WigglePen/Prefabs/WigglePen.prefab
 シーン内で、プレイヤーが手を伸ばせる位置に置きます。最初は配置位置だけを調整し、Prefab内部の参照やマテリアル設定はそのまま使ってください。
 
 ::: tip すでに通常のQvPenを置いている場合
-通常のQvPenの線は、自動では揺れる線に変わりません。上記の **WigglePen Variant** を配置してください。
+通常のQvPenの線は、自動では揺れる線に変わりません。上記の **WigglePen** を配置してください。
 :::
 
 ## 3. 保存して試す
